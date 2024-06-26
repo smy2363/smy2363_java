@@ -9,7 +9,7 @@ public class input {
 //		System.out.println("자바출력");
 //		// system.in - 입력
 //		// 입력받을 수 있는 내장 클래스 - Scanner
-//		Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 //		
 //		// float 타입 - netxFloat()   double - nextDouble()
 //		// byte - nextByte() short - nextShort()
@@ -111,17 +111,34 @@ public class input {
 		      변수.nextFloat(); float타입 실수만 입력
 		      변수.nextDouble(); double타입 실수만 입력
 		      변수.next(); 문자열 입력
-		      변수.nextLine(); 문자열 입력
+		      변수.nextLine(); 문자열 입력  
 		      
 		      
 		     c언어, 자바, 건축학개론 시험 성적을 입력하세요/
-		     세과목의 총점과 평균을 각각 출력하세요
+		     세과목의 총점과 평균을 각각 출력하세요  */
 		     
+		     int C언어, 자바, 건축학개론;
+		     
+		     C언어=scan.nextInt();
+		     자바=scan.nextInt();
+		     건축학개론=scan.nextInt();
+		     
+		     int 총점= C언어+자바+건축학개론;
+		     int 평균=총점/3;
+		
+		     System.out.println("C언어의 점수는?"+C언어+"점");
+		     System.out.println("자바의 점수는?"+자바+"점");
+		     System.out.println("건축학개론의 점수는?"+건축학개론+"점");
+		     System.out.println("총점은?"+총점+"점");
+		     System.out.println("평균는?"+평균+"점");
+		     
+		     System.out.printf("총점: %d점, 평균: %d점 \n",총점,평균);
+		     
+		     
+
 		     
 		  
-		 */
-		
-		
+
 		
 	}
 
