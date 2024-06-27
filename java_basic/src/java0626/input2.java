@@ -33,6 +33,7 @@ public class input2 {
 		System.out.println("직원 이름은?"+ 직원이름);
 		System.out.println("소속 부서명은?"+소속부서명);
 		System.out.println("실수령액은?"+실수령액+"원");
+		
 
 		
 		
