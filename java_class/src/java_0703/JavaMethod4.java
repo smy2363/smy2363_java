@@ -20,24 +20,58 @@ public class JavaMethod4 {
 		System.out.println(결과);
 		
 		// 다음의 물음표에 들어갈 코드를 작성하여 이름과 나이가 출력되게!!
-		
-		String 이름=rm.getName(); 
-		String userName=이름;
+
+		String userName=rm.getName();
 		int age=34;
+		
 		System.out.println(userName+" "+age);
+		
+		// 국어(89), 영어(78), 수학(50) 세과목의 총점을 구하는 메서드
+		// 세과목의 평균을 구하는 메서드
+		// 총 점과 평균을 출력하세요
+		int kor=89, eng=78, mat=50;
+		
+		int 총점=rm.score(kor, eng, mat);
+		int 평균=rm.scoreAvg(총점);
+		
+		System.out.println("총 합계는? "+총점+"\n"+"총 평균은 ?"+평균);
 		
 
 	}
 
 }
 
+/*
+ 	주사위 게임 (과제)
+ 
+ j형준과 s석완이가 주사위 게임을 한다.
+ 주사위는 하나, 육면이다.
+ 주사위의 값이 큰 사람이 이긴다.
+ 
+ 주사위 값 구하는 메서드
+ 
+ 주사위 값 비교하여 누가 이겼는지 출력하는 메서드
+  
+  
+ */
+
 class ReturnMth{
+	
+	int scoreAvg(int 총점) {
+		int avg=총점/3;
+		return avg;
+	}
+	
+	int score(int kor, int eng, int mat) {
+		int sum=kor+eng+mat;
+		return sum;
+		
+	}
 	
 	String getName(){
 		String name="이순신"; 
-		int age=34;
-		String info=name+age;
-		return info;
+		return name;
+
 	}
 	
 	int sum() {
