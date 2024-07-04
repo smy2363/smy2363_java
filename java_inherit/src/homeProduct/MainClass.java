@@ -5,7 +5,8 @@ public class MainClass {
 	public static void main(String[] args) {
 		
 		
-		Tv tv=new Tv();
+		Tv tv=new Tv("»ï¼º",10000);
+		tv.brand="»ï¼º";
 		tv.power();
 		tv.power();
 		
