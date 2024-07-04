@@ -42,7 +42,14 @@ public class study2 {
 		name.add("¹ÚÁøÈñ");
 		name.add("±èÈñÁø");
 		name.add("¿À¿¬¼ö");
-		name.add("");
+		name.add("¹ÚÀÌ½½");
+		
+		for(String kim:name) {
+				System.out.println(kim.indexOf("±è"));
+			
+		}
+		
+
 
 
 	
