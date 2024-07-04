@@ -1,4 +1,4 @@
-package java_0703;
+package java0703;
 
 import java.util.Scanner;
 
