@@ -29,6 +29,20 @@ public class study2 {
 		// ArrayList를 사용하기 - 어려우면 정적배열로 String[]방식
 		// 이름 10개저장
 		// 이름 중에서 김씨만 출력하기
+		
+		
+		ArrayList<String> name=new ArrayList<String>();
+		
+		name.add("김유신");
+		name.add("김정희");
+		name.add("한석봉");
+		name.add("이림");
+		name.add("송미연");
+		name.add("김사랑");
+		name.add("박진희");
+		name.add("김희진");
+		name.add("오연수");
+		name.add("");
 
 
 	
