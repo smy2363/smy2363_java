@@ -45,7 +45,10 @@ public class study2 {
 		name.add("¹ÚÀÌ½½");
 		
 		for(String kim:name) {
-				System.out.println(kim.indexOf("±è"));
+			int kimname=kim.indexOf('±è');
+			
+			System.out.println(kim);
+		
 			
 		}
 		
