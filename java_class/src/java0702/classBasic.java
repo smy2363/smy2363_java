@@ -34,7 +34,7 @@ public class classBasic {
 		book1.title="java";
 		book1.page=495;
 		
-		book2.title="메모리최적화기법";
+		book2.title="메모리최적화기법법";
 		book2.page=893;
 		
 		System.out.println(book1.title);
