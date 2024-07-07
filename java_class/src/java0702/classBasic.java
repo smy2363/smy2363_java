@@ -27,7 +27,7 @@ public class classBasic {
 		System.out.println(member2.name);
 		System.out.println(member2.age);
 		
-		// java - 495p, 메모리최적화기법 - 893p
+		// java - 495p, 메모리최적화기법법 - 893p
 		Book book1=new Book();
 		Book book2=new Book();
 		
