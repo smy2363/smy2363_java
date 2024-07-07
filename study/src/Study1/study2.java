@@ -50,9 +50,7 @@ public class study2 {
 			}
 		}
 		
-		
-
-12
+	
 
 	
 	
