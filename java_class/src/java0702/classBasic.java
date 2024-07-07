@@ -4,6 +4,7 @@ public class classBasic {
 
 	public static void main(String[] args) {
 		
+		
 		// 정의 된 클래스 타입의 공간을 생성 한다.
 		// 생성된 공간에 데이터를 저장한다.
 		// 클래스 타입으로 생성된 공간을 객체 또는 인스턴스라고한다.
