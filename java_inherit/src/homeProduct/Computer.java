@@ -8,7 +8,7 @@ public class Computer extends House {
 	}
 	
 	@Override
-	void power() {
+	protected void power() {
 		
 	}
 }
