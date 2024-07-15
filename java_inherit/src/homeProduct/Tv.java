@@ -2,7 +2,7 @@ package homeProduct;
 
 public class Tv extends House {
 	
-	private int channel=10;; // 채널
+	int channel=10;; // 채널
 	private int vol=5; // 소리
 	
 	
@@ -19,7 +19,7 @@ public class Tv extends House {
 	public void setVol(int vol) {
 		this.vol = vol;
 	}
-	protected Tv(){ // 생성자 메서드
+	public Tv(){ // 생성자 메서드
 		super();
 	}
 	// 매개변수 있는 생성자 메서드
