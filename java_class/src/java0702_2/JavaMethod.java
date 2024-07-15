@@ -27,7 +27,7 @@ public class JavaMethod {
 }
 
 class a{
-	int num=10;
+	static int num=10;
 	
 	static void out() { // 클래스 메서드
 		System.out.println(num);
