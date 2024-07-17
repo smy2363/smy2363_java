@@ -71,6 +71,8 @@ public class SelectDrink implements Kiosk {
 		System.out.print("메뉴 선택 : ");
 		int menu=sc.nextInt();
 		
+		if( !tea.containsKey(menu) ) return;
+		
 		Kiosk order = new Order(tea.get(menu));
 		order.action();
 	}

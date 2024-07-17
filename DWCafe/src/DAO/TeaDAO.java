@@ -6,7 +6,7 @@ import DTO.Tea;
 
 public class TeaDAO extends ParentDAO{
 	
-	public HashMap<Integer, Tea> findAll(){
+	public HashMap<Integer, Tea> findAll(String table){
 		HashMap<Integer, Tea> data = new HashMap<>();
 		
 		String sql="select * from tea";
