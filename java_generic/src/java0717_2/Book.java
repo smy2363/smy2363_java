@@ -11,7 +11,7 @@ public class Book extends Media{
 	
 	@Override
 	public String toString() {
-		return super.toString()+" , 저자 :"+author;
+		return super.toString()+" , 저자 : "+author;
 	}
 
 	public String getAuthor() {

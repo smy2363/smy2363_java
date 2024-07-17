@@ -17,6 +17,20 @@ public class GenericStudy2 {
 		dvd.add( new DVD("M4G421", "지렁이게임만들기", "치즈") );
 		dvd.add( new DVD("M5F312", "웹툰모음집", "뿜여사") );
 		
+		
+		// 대여 하기
+		Library lib = new Library();
+		lib.addRental( book.get(0), "이순신" );
+		lib.addRental( dvd.get(2), "김춘추" );
+		lib.showRentalList();
+		
+		
+//		Rental<DVD> rent = new Rental<>(dvd.get(1), "이순신" );
+//		System.out.println(rent);
+//		
+//		Rental<Book> brent = new Rental<>(book.get(1), "김춘추" );
+//		System.out.println(brent);
+		
 	}	
 
 }
