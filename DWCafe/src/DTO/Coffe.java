@@ -6,7 +6,7 @@ public class Coffe {
 	private String itemName;
 	private boolean deCaffein;
 	
-	public Coffe(int price, String itemName, boolean deCaffein) {
+	public Coffe(String itemName, int price, boolean deCaffein) {
 		this.price=price;
 		this.itemName=itemName;
 		this.deCaffein=deCaffein;

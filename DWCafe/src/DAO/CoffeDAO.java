@@ -21,8 +21,8 @@ public class CoffeDAO extends ParentDAO{
 			while(rs.next()) {
 				// rs.get데이터타입("컬럼명")
 				data.put(rs.getInt("coffe_id"),
-			new Coffe( rs.getString("item_name") , rs.getInt("price"),
-							rs.getBoolean("decaffein") )	
+			new Coffe( rs.getString("itemName") , rs.getInt("price"),
+							rs.getBoolean("deCaffein") )	
 						);
 			}
 			
