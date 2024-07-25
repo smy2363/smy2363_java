@@ -1,7 +1,7 @@
 package study;
 
 public class Member {
-	private String userId;
+	private String userId;  // 테이블컬럼명 규칙 - user_id
 	private String userPassword;
 	private String userEmail;
 	private String userName;
