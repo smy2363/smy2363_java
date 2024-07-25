@@ -35,7 +35,28 @@
 			</form>
 		</div>
 		<div id="boardWriteBox">
-			<a href="?part=boardWrite" id="wrBt">글작성</a>
+			<a id="wrBt">글작성</a>
 		</div>
 	</div>
 </div>
+
+<%
+	int level = 0;
+	if(session.getAttribute("user") !=null){
+		level = ((study.Member)session.getAttribute("user")).getLevel();
+	}
+%>
+
+
+<script>
+	//글 작성을 클릭할 때 로그인 회원중에 권한이 있는 사람만 작성가능
+	let lv = '<%=level%>';
+	$("#wrBt").on("click",function(){ // 글작성을 클릭하면
+		if(lv==3){
+			location.href="?part=boardWrite"; // 권한이 3이면 글작성 이동
+		}else{
+			alert("글 작성 권한이 없습니다.");
+		}
+	});
+	
+</script>
