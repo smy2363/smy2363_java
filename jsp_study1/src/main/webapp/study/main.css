@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* default.css */
 
 #mainBox{
 	width:100%;
@@ -7,6 +6,7 @@
 }
 #slider{
 	background:url('https://picsum.photos/1000/300');
+	background-size:cover;
 	height:300px;
 }
 #recently{
@@ -31,7 +31,6 @@
 	top:30px;
 	cursor:pointer;
 }
-
 
 
 
