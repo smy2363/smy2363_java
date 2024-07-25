@@ -37,7 +37,7 @@
 		if(id.value==''){ // 아이디 입력 하지않은 경우
 			document.getElementsByClassName("error")[0].innerText="아이디를 입력하세요";
 		}else if(pw.value==''){ // 비밀번호 입력 하지 않은 경우
-			
+			document.getElementsByClassName("error")[1].innerText="비밀번호를 입력하세요";
 		}
 		
 	});
