@@ -38,6 +38,8 @@
 			document.getElementsByClassName("error")[0].innerText="아이디를 입력하세요";
 		}else if(pw.value==''){ // 비밀번호 입력 하지 않은 경우
 			document.getElementsByClassName("error")[1].innerText="비밀번호를 입력하세요";
+		}else{ // 아이디, 비밀번호 입력 하였다면 로그인 처리페이지로 전송및 이동
+			document.getElementById("signFm").submit();
 		}
 		
 	});
