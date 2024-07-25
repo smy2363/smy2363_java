@@ -66,7 +66,7 @@
  					session.setAttribute("user",m);
  				// m은 입력한 아이디와 비밀번호가 일치한 Member클래스 객체이다.
  					String path=request.getContextPath()+"/study";
- 					response.sendRedirect("");
+ 					response.sendRedirect(path);
  				}
  			}
  		}
