@@ -1,12 +1,33 @@
 package study;
 
 public class Board {
-	private String title;
+
+	private int board_id;
 	private String writer;
+	private String title;
 	private String content;
 	private int hit;
+
+	
+	public Board() {   }
+	public Board(int board_id, String writer, String title,
+			String content, int hit) {
+		this.board_id=board_id;
+		this.writer=writer;
+		this.title=title;
+		this.content=content;
+		this.hit=hit;
+	}
 	
 	
+	
+	
+	public int getBoard_id() {
+		return board_id;
+	}
+	public void setBoard_id(int board_id) {
+		this.board_id = board_id;
+	}
 	public String getTitle() {
 		return title;
 	}

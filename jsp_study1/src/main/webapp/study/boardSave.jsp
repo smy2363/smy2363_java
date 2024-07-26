@@ -6,12 +6,29 @@
 
 <%--boardSave.jsp--%>
 
+
 <%
 	request.setCharacterEncoding("UTF-8");
 	// 작성자 가져오기
 	String writer = ((Member)session.getAttribute("user")).getUserId();
-	String title = request.getParameter("title");
-	String content=request.getParameter("content");
+	
+	// 이미지 업로드해서 저장될 실제 위치 (윈도우일때 경로 \\2번표시해야함)
+	String path="C:\\smy2363\\smy2363_java\\jsp_study1\\src\\main\\webapp\\study\\image";
+	
+	// 업로드할 이미지의 최대크기
+	int size=1024*1024*20;
+	
+	String title = null;
+	String content = null;
+	try{
+		
+		
+	}catch(Exception e){
+		System.out.println("파일 업로드 실패");
+		e.printStackTrace();
+	}
+	
+
 	
 	// 데이터베이스 사용
 	DBconnect db= new DBconnect();

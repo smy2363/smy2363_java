@@ -18,7 +18,7 @@
 			<ul>
 				<li>
 					<span class="title">제목</span>
-					<span class="write">작성자</span>
+					<span class="writer">작성자</span>
 					<span class="isAnswer">답변</span>
 				</li>
 		
@@ -54,7 +54,7 @@
 						<% }%>
 						
 						</span>
-						<span class="write"><%=iq.getWriter() %> </span>
+						<span class="writer"><%=iq.getWriter() %> </span>
 						<span class="isAnswer">
 				<%=iq.getAnswer()==null ? "미답변" : "답변완료" %>		
 						</span>
