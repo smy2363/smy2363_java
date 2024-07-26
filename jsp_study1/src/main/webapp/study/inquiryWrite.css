@@ -1,14 +1,15 @@
 @charset "UTF-8";
-@charset "UTF-8";
 
-
+#inquiryWrap{
+	width:600px;
+	margin:70px auto;
+}
 #writeBox{
 	border:1px solid #aaa;
 	border-radius:10px;
 	padding:20px;
 	margin:20px 0;
 }
-
 .writeInput{
 	width:100%;
 	display:flex;
@@ -16,17 +17,14 @@
 	font-size:17px;
 	margin-bottom:20px;
 }
-
 .writeInput label{
 	width:20%;
 }
-
 #title, #content{
 	width:80%;
 	font-size:19px;
 	padding:5px 10px;
 }
-
 #title{ 
 	border:0; 
 	outline: none;
