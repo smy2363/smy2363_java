@@ -50,13 +50,15 @@ public class SendEmail {
 			msg.setRecipients(Message.RecipientType.TO, 
 					InternetAddress.parse(adminEmail)); // 받는 이메일 주소
 			
+			msg.setHeader("Content-Type","text/html;charset=utf-8");
+			
 			msg.setSubject("문의 글 등록 ["+title+"]-"+fromEmail); //이메일 제목
 			
-			msg.setText( // 이메일 내용
+			msg.setContent( // 이메일 내용
 				"<h3>문의 내용</h3> <b>"+content+
 		"</b> <div> <a href='http://localhost:8080/jsp_study1/study/?part=inquiry'>"+
 		"문의글 확인</a></div>"
-					);
+					, "text/html;charset=utf-8");
 			
 			Transport.send(msg); // 메일 전송
 			
