@@ -1,3 +1,5 @@
+<%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@page import="java.sql.SQLException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="study.*, java.sql.*" %>
@@ -16,12 +18,14 @@
 	String path="C:\\smy2363\\smy2363_java\\jsp_study1\\src\\main\\webapp\\study\\image";
 	
 	// 업로드할 이미지의 최대크기
-	int size=1024*1024*20;
+	int size=1024*1024*20; //20Mbyte 설정
 	
 	String title = null;
 	String content = null;
 	try{
-		
+		// 파일업로드를 위한 MultipartRequest 객체 생성
+		MultipartRequest mr = new MultipartRequest(request, path, size, 
+				"UTF-8", new DefaultFileRenamePolicy());
 		
 	}catch(Exception e){
 		System.out.println("파일 업로드 실패");
