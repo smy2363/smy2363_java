@@ -26,7 +26,7 @@
 						DBconnect db = new DBconnect();
 						String sql="select * from inquiry order by inquiry_id desc";
 						//order by 정렬기준컬럼명 asc(desc:내림차순, asc: 오름차순)
-
+	
 						ArrayList<Inquiry> list = new ArrayList<>();
 						try{
 							db.pt = db.conn.prepareStatement(sql);
