@@ -15,7 +15,7 @@
 		<input type = "password" name= "pw" placeholder="비밀번호"><br>
 		<button>로그인</button>
 		</form>
-	
+		<div style="color:red">${fail}</div>
 
 </body>
 </html>
