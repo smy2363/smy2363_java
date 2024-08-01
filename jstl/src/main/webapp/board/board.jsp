@@ -37,7 +37,7 @@
 				<tr>
 					<td class="num">${row.board_id}</td>
 					<td class="title">
-						<a href="?part=view&id=${row.board_id}">${row.title}</a>
+						<a href="/boardView.do?id=${row.board_id}">${row.title}</a>
 					</td>
 					<td class="writer">${row.writer}</td>
 					<td class="hit">${row.hit}</td>
