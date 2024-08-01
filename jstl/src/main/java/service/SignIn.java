@@ -10,11 +10,14 @@ public class SignIn implements MainActive {
 	@Override
 	public String action(HttpServletRequest request, HttpServletResponse response) {
 		
+		String view="/";
+		
 		if(request.getSession().getAttribute("user") != null) { // 로그인중 상태일경우
 			request.getSession().removeAttribute("user"); //user세션 삭제
 		}else { // 로그인 시도
 			String id = request.getParameter("userId");
 			String pw = request.getParameter("userPassword");
+			view = request.getParameter("preURL");
 			
 			// 데이터베이스에서 아이디 비번 조회 하기
 			MemberDAO dao = new MemberDAO();
@@ -25,7 +28,7 @@ public class SignIn implements MainActive {
 		}
 		
 		try {
-			response.sendRedirect("/");	
+			response.sendRedirect(view);	
 		}catch(Exception e) {  }
 		
 		return null;

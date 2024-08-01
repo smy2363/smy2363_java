@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="board/boardWrite.css">
 </head>
 <body>
 
@@ -13,18 +14,19 @@
 
 	<div id="writeBox">
 		<div class="writeInput">
-			<label>Á¦¸ñ</label>
+			<label>ì œëª©</label>
 			<input type="text" name="title" id="title">
 		</div>
 		
 		<div class="writeInput">
-			<label>³»¿ë</label>
+			<label>ë‚´ìš©</label>
 			<textarea name="content" id="content"></textarea>
 		</div>
-		<button>ÀÛ¼º</button>
+		<button>ìž‘ì„±</button>
 	
 	</div>
 </form>
+
 
 </body>
 </html>

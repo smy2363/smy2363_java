@@ -13,12 +13,13 @@
   
   <servlet>
   	<servlet-name>Main</servlet-name>
-  	<servlet-class>Controller.MainControl</servlet-class>
+  	<servlet-class>controller.MainControl</servlet-class>
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>Main</servlet-name>
   	<url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
   
 </web-app>

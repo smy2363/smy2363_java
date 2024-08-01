@@ -1,66 +1,108 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+  
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- jquery CDN-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<!--ë¶€íŠ¸ìŠ¤íŠ¸ë© CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+<link rel="stylesheet" href="board/board.css">
+
 </head>
 <body>
 
 <div id="boardWrap">
-	<h2>°Ô½ÃÆÇ</h2>
+	<h2>ê²Œì‹œíŒ</h2>
 	<div id="boardBox">
 		<div id="boardListBox">
 			<table id="boardList">
 				<tr>
-					<th class="num">¹øÈ£</th>
-					<th class="title">Á¦¸ñ</th>
-					<th class="writer">ÀÛ¼ºÀÚ</th>
-					<th class="hit">Á¶È¸¼ö</th>
+					<th class="num">ë²ˆí˜¸</th>
+					<th class="title">ì œëª©</th>
+					<th class="writer">ì‘ì„±ì</th>
+					<th class="hit">ì¡°íšŒìˆ˜</th>
 				</tr>
-				
+		<c:forEach var="row" items="${list}">		
 				<tr>
-					<td class="num"></td>
+					<td class="num">${row.board_id}</td>
 					<td class="title">
-						<a href="?part=view&id=">  </a>
+						<a href="?part=view&id=${row.board_id}">${row.title}</a>
 					</td>
-					<td class="writer"></td>
-					<td class="hit"></td>
+					<td class="writer">${row.writer}</td>
+					<td class="hit">${row.hit}</td>
 				</tr>
-			
-				
+		</c:forEach>
 			</table>
+		<!-- í˜ì´ì§• -->
+<style>
+	#pageNumList{list-style:none; padding:30px 0; margin: 0;
+		display:flex;
+		justify-content:center;
+		}
+	#pageNumList li{ width: 50px; text-align: center;}
+	#pageNumList .nowPage{background: #ccc; font-weight:800;}	
+</style>		
+		
+		<div id="pageNumbers">
+			<ul id="pageNumList">
+			
+		<a href="/board.do?page=${pageNum-2}${param.word==null ? '' :'&word='}${param.word}"><i class="bi bi-arrow-left-square"></i></a>	
+		<c:forEach var="i" begin="${startPage}" end="${endPage}" step="1">
+		
+				<c:if test="${pageNum == i}">
+					<li class="nowPage">${i}</li>
+				</c:if>
+				<c:if test="${pageNum != i}">
+				<li><a href="/board.do?page=${i}${param.word==null ? '' :'&word='}${param.word}">${i}</a></li>
+				</c:if>
+		</c:forEach>
+		<a href="/board.do?page=${pageNum+2}"><i class="bi bi-arrow-right-square"></i></a>
+			</ul>
+		</div>
+			
+			
+			
 		</div>
 		<div id="boardSearchBox">
-			<form method="get" action="?part=board">
+			<form method="get" action="/board.do">
 				<div class="boardSearch">
 					<input type="search" name="word" id="word">
-					<button>°Ë»ö</button>
+					<button>ê²€ìƒ‰</button>
 				</div>
 			</form>
 		</div>
 		<div id="boardWriteBox">
-			<a  id="wrBt">±ÛÀÛ¼º</a>
+			<a  id="wrBt">ê¸€ì‘ì„±</a>
 		</div>
 	</div>
 </div>
 
+
 <script>
 	
-	$("#wrBt").on("click",function(){ //±ÛÀÛ¼ºÀ» Å¬¸¯ÇÏ¸é
+	$("#wrBt").on("click",function(){ //ê¸€ì‘ì„±ì„ í´ë¦­í•˜ë©´
 		if( '${ sessionScope.user }' != ''){  
 			location.href="/write.do"; 
 		}else{
-			var isOk = confirm("±Û ÀÛ¼º ±ÇÇÑÀÌ ¾ø½À´Ï´Ù. ·Î±×ÀÎ ÇÏ½Ã°Ú½À´Ï±î?");
-			if(isOk){ // ·Î±×ÀÎ ÇÏ°Ú´Ù°í È®ÀÎ ¹öÆ°Å¬¸¯ ÇÏ¿´À¸´Ï ·Î±×ÀÎÆäÀÌÁöÀÌµ¿
+			var isOk = confirm("ê¸€ ì‘ì„± ê¶Œí•œì´ ì—†ìŠµë‹ˆë‹¤. ë¡œê·¸ì¸ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+			if(isOk){ // ë¡œê·¸ì¸ í•˜ê² ë‹¤ê³  í™•ì¸ ë²„íŠ¼í´ë¦­ í•˜ì˜€ìœ¼ë‹ˆ ë¡œê·¸ì¸í˜ì´ì§€ì´ë™
 				location.href="/signIn.do";
 			}
 		}
 	});
 	
 </script>
-
 
 
 
