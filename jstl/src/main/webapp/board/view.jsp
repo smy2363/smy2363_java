@@ -55,11 +55,18 @@
 				</td>
 			</tr>
 		</c:if>	
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
 		
+		<c:forEach var="row" items="${comments}">
+			<tr>
+				<td>${row.writer }<br>${row.writeDate}
+					<br>
+					<c:if test="${sessionScope.user eq row.writer}">
+						<a href="/commentDelete.do?id=${row.commentId}">삭제</a>
+					</c:if>
+				</td>	
+				<td>${row.comment}</td>
+			</tr>
+		</c:forEach>
 	</table>
 	
 		
@@ -72,7 +79,8 @@
 		let $fm = $('<form></form>'); //폼태그 생성
 		$fm.attr('method','get');
 		$fm.attr('action','/comment.do');
-		$fm.apped($("#comment"));
+		$fm.append("<input type=hidden name=boardId value=${board.board_id}>");
+		$fm.append($("#comment"));
 		$fm.appendTo("body");
 		$fm.submit(); // 전송
 	});
