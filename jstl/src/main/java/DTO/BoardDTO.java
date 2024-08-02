@@ -7,9 +7,9 @@ public class BoardDTO {
 	private String content;
 	private int hit;
 	
-	public BoardDTO(String writer, String title, String content) {
-		this.writer=writer;
+	public BoardDTO( String title, String writer, String content) {
 		this.title=title;
+		this.writer=writer;
 		this.content=content;
 	}
 	public BoardDTO(int board_id, String title, String writer, 
