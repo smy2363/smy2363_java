@@ -13,7 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	<a href="/board.do">게시판목록</a>
 	<table>
 		<tr> 
 			<td>제목</td>
@@ -41,20 +41,52 @@
 		</tr>
 	</table>
 	
+	<hr>
+	<!-- 댓글 -->
+	<table>
+	
+		<c:if test="${sessionScope.user != null }">	
+			<tr>
+				<td>
+					<textarea id="comment" name="comment" rows=3 cols=30></textarea>
+				</td>
+				<td>
+					<button id="commentBt">입력</button>
+				</td>
+			</tr>
+		</c:if>	
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		
+	</table>
+	
 		
 </body>
 </html>
 
 <script>
 
-$("#modify").on("click",function(){
-	location.href="/boardUpdate.do?id=${board.board_id}";
-});
-$("#delete").on("click",function(){
-	var isOk = confirm("정말로 삭제 하시겠습니까? ");
-	if(isOk){
-		location.href="/boardDelete.do?id=${board.board_id}";
-	}
-});
+	$("#commentBt").on("click",function(){
+		let $fm = $('<form></form>'); //폼태그 생성
+		$fm.attr('method','get');
+		$fm.attr('action','/comment.do');
+		$fm.apped($("#comment"));
+		$fm.appendTo("body");
+		$fm.submit(); // 전송
+	});
+
+
+
+	$("#modify").on("click",function(){
+		location.href="/boardUpdate.do?id=${board.board_id}";
+	});
+	$("#delete").on("click",function(){
+		var isOk = confirm("정말로 삭제 하시겠습니까? ");
+		if(isOk){
+			location.href="/boardDelete.do?id=${board.board_id}";
+		}
+	});
 
 </script>
